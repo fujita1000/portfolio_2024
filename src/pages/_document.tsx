@@ -7,7 +7,7 @@ class Document extends NextDocument<Props> {
   render() {
     return (
       <Html lang="ja">
-        <title>fujita"s PortFolio</title>
+        <title>fujita PortFolio</title>
         <Head>
           <link
             rel="apple-touch-icon"
