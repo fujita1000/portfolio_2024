@@ -55,7 +55,7 @@ const PostModal: React.FC<PostModalProps> = ({ postId, postTitle, body, image, o
                       <Image src={"close.svg"} width={40} height={40} alt="close" />
                     </div>
                   </button>
-                  <button onClick={handleCreateChatRoomClick} className="text-white"> <Image src={"/../comment.png"} className='absolute top-[25px] right-[100px]' width={50} height={50} alt='logo'/></button>
+                  <button onClick={handleCreateChatRoomClick} className="text-white"> <Image src={"/comment.png"} className='absolute top-[25px] right-[100px]' width={50} height={50} alt='logo'/></button>
                   <p className="text-white mt-[50px] text-[24px] mb-[20px]">{postTitle}</p> 
                   <div className="[&>p]:text-white">{documentToReactComponents(body)}</div> 
                 </div>
