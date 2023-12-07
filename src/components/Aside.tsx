@@ -2,7 +2,7 @@ import Skills from "./Skills/Skills"
 
 const Aside = () => {
     return(
-        <div className="w-[35%] h-full bg-aside_bg">
+        <aside className="w-[35%] h-full bg-aside_bg hidden md:block">
             <div className="w-[88%] mt-[30px] ml-[30px]">
             <h1 className="text-h1_bg text-[64px]">fujita Portfolio</h1>
             <div className="[&>p]:text-p_bg [&>p]:text-[24px]">
@@ -12,9 +12,7 @@ const Aside = () => {
             </div>
             </div>
             <Skills/>
-        </div>
-
-        
+        </aside>
     )
 }
 

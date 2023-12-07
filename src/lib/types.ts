@@ -48,26 +48,3 @@ type SimpleSys = {
   createdAt: string;
   updatedAt: string;
 };
-
-
-//目次の型宣言//
-//目次の型宣言//
-export type TextBlock = {
-  value: string;
-};
-
-export type ContentBlock = {
-  nodeType: string;
-  content: (TextBlock | {})[];
-};
-
-export type Content = {
-  content: ContentBlock[];
-};
-
-export type Header = {
-  type: string;
-  value: string;
-};
-//目次の型宣言//
-//目次の型宣言//

@@ -95,3 +95,4 @@ export const deleteUserAccount = async () => {
       console.error('Error creating or checking chat room:', error);
     }
   };
+

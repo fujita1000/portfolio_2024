@@ -11,39 +11,39 @@ type Props = {
     Posts: BlogPost[];
   };
   
-const Page = ({Posts}:Props) => {
-
-  const [languages, setLanguages] = useState('');
-  const [database, setDatabase] = useState('');
-  const [cms, setCms] = useState('');
-  const filtered = multipleSearch(Posts, languages, database, cms);
-
-  return (
-    <>
-      <main className="min-h-screen flex">
-        <Aside />
-        <div className="w-[65%]">
-          <div className="w-[98%] m-auto">
-           <SelectBox
-            languages={languages}
-            database={database}
-            cms={cms}
-            onChangeLanguages={(e) => {setLanguages(e.target.value);}}
-            onChangeDatabase={(e) => {setDatabase(e.target.value);}}
-            onChangeCms={(e) => {setCms(e.target.value);}}
-            />
-
-          <div className="xl:grid xl:gap-4 2xl:gap-6 3xl:gap-8 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4">
-              {filtered.map((post:any) => (
-                <PostCard key={post.slug} post={post} />
-              ))}
+  const Page = ({ Posts }: Props) => {
+    const [languages, setLanguages] = useState('');
+    const [database, setDatabase] = useState('');
+    const [cms, setCms] = useState('');
+    const filtered = multipleSearch(Posts, languages, database, cms);
+  
+    return (
+      <>
+        <main className="min-h-screen flex">
+          {/* タブレット未満の場合はAsideを非表示に */}
+          <Aside />
+          <div className="w-full md:w-[65%]">
+            <div className="w-[98%] m-auto">
+              <SelectBox
+                languages={languages}
+                database={database}
+                cms={cms}
+                onChangeLanguages={(e) => { setLanguages(e.target.value); }}
+                onChangeDatabase={(e) => { setDatabase(e.target.value); }}
+                onChangeCms={(e) => { setCms(e.target.value); }}
+              />
+  
+              <div className="xl:grid xl:gap-4 2xl:gap-6 3xl:gap-8 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4">
+                {filtered.map((post: any) => (
+                  <PostCard key={post.slug} post={post} />
+                ))}
+              </div>
+            </div>
           </div>
-          </div>
-        </div>
-      </main>
-    </>
-  );
-};
+        </main>
+      </>
+    );
+  };
 
 export default Page;
 
