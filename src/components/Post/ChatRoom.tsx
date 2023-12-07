@@ -94,8 +94,10 @@ const ChatRoom: React.FC<ChatRoomProps> = ({ postId }) => {
   };
 
 
+
   return (
-    <div>
+    <>
+    <div className="h-[350px] overflow-y-auto border border-gray-300 p-4 rounded-md"> {/* Set maximum height and enable vertical scrolling */}
       <h1 className="text-white">【{chatRoomTitle}】の掲示板</h1>
       <div className='my-[20px]'>
         {messages.map((message, index) => (
@@ -103,23 +105,33 @@ const ChatRoom: React.FC<ChatRoomProps> = ({ postId }) => {
             <p className='mt-[20px]'>氏名: {message.userName}(id: {message.userId && `${message.userId.substring(0, 6)}...`})</p>
             <p>{message.text}</p>
             {auth.currentUser?.uid === message.userId && (
-              <button onClick={() => handleDeleteMessage(message.id)}><Image src={"gomi_w.svg"} width={20} height={20} alt='messageDelete'/></button>
+              <button onClick={() => handleDeleteMessage(message.id)}>
+                <Image src={"gomi_w.svg"} width={20} height={20} alt='messageDelete'/>
+              </button>
             )}
           </div>
         ))}
-      </div> 
-      {!auth.currentUser && <><p className='text-white'><Link href={"/mypage"} className="text-blue-600">ログイン</Link>するとメッセージ送信ボタンが表示されます</p></>}
+      </div>
+    </div>
+
+    <div className='pt-[20px]'>
+    {!auth.currentUser && <><p className='text-white'><Link href={"/mypage"} className="text-blue-600">ログイン</Link>するとメッセージ送信ボタンが表示されます</p></>}
       {auth.currentUser && (
+        <div className='relative'>
         <form onSubmit={handleSendMessage}>
-          <input
-            type="text"
+          <textarea
             value={newMessage}
+            className='h-[50px] w-[75%]'
             onChange={(e) => setNewMessage(e.target.value)}
           />
-     <button type="submit" className='text-white'>送信</button>
+          <div className='absolute bottom-[0px] right-[10px] z-[20]'>
+          <button type="submit" className='text-black'><Image src={"/submit.png"} width={50} height={20} alt='送信ボタン'></Image></button>
+          </div>
         </form>
+        </div>
       )}
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -4,6 +4,6 @@ git commit -m "Initial Commit"
 
 git push -u origin main
 
-git vercel login
+yarn vercel login
 
-git vercel deploy
+yarn vercel deploy

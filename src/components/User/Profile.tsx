@@ -55,21 +55,21 @@ const Profile = () => {
 
   return (
     <div className='absolute w-full h-full'>
-      <div className='flex items-center h-[200px] mr-[20px]'>
+      <div className='flex items-center h-[100px] lg:h-[200px] mr-[20px]'>
         <div
-          className="rounded-full bg-white w-[187px] h-[187px]"
+          className="rounded-full bg-white w-[100px] h-[100px] lg:w-[187px] lg:h-[187px]"
           style={{ backgroundImage: `url(${user?.photoURL || '/default-profile-image.png'})`, backgroundSize: 'cover' }}
         ></div>
       </div>
 
       <div className='absolute top-0 right-0'>
         {!isEditing && (
-          <button onClick={toggleEditing} className='bg-select_border w-[500px] h-[50px] rounded-[10px]'>
+          <button onClick={toggleEditing} className='bg-select_border lg:w-[500px] w-[200px] h-[50px] rounded-[10px]'>
             編集する
           </button>
         )}
         {isEditing && (
-          <button onClick={saveProfile} className='bg-remove_bg w-[500px] h-[50px] rounded-[10px]'>
+          <button onClick={saveProfile} className='bg-remove_bg lg:w-[500px] w-[200px] h-[50px] rounded-[10px]'>
             保存
           </button>
         )}
@@ -77,7 +77,7 @@ const Profile = () => {
 
       {isEditing && (
         <div>
-          <label className='absolute top-0 left-[200px] text-[30px]'>
+          <label className='absolute top-[25%] lg:top-0 lg:left-[200px] text-[25px]'>
             <input
               value={name}
               maxLength={10}
@@ -86,13 +86,13 @@ const Profile = () => {
             />
           </label>
           <br />
-          <label className='absolute top-[100px] left-[200px] text-[30px]'>
+          <label className='absolute top-[35%] lg:top-[100px] lg:left-[200px] text-[30px] w-[600px] h-[200px]'>
             自己紹介
             <br />
             <textarea
               value={introduction}
               maxLength={100}
-              className='text-black text-[20px] w-[600px] h-[200px]'
+              className='text-black text-[16px] w-[300px] h-[100px]'
               onChange={(e) => setIntroduction(e.target.value)}
             />
           </label>
@@ -102,11 +102,11 @@ const Profile = () => {
 
       {!isEditing && (
         <div>
-          <div className='absolute top-0 left-[200px] text-[30px]'>{name}</div>
-          <p className='absolute top-[100px] left-[200px] text-[30px] w-[600px] h-[200px]' style={{ whiteSpace: 'pre-line' }}>
+          <div className='absolute top-[25%] lg:top-0 lg:left-[200px] text-[25px]'>{name}</div>
+          <p className='absolute top-[35%] lg:top-[100px] lg:left-[200px] text-[25px] w-[600px] h-[200px]' style={{ whiteSpace: 'pre-line' }}>
             自己紹介
             <br />
-            <span className='text-[20px]'>{introduction}</span>
+            <span className='text-[16px]'>{introduction}</span>
           </p>
         </div>
       )}

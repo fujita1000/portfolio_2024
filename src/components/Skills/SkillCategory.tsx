@@ -21,11 +21,11 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, options, starArray
         <motion.div
           className="main-box bg-header_bg border border-skills_border hover:opacity-60 text-white flex items-center pl-[30px] relative"
           onClick={toggleDropdown}
-          initial={{ width: '100%', height: '70px' }}
+          initial={{ width: '100%', height: '50px' }}
         >
-          <p className='text-[35px]'>{title}</p>
+          <p className='text-[25px]'>{title}</p>
           <div className=" absolute right-[30px]">
-            <Image src={"/down.svg"} width={42} height={42} alt='ドロップダウンアイコン'/>
+            <Image src={"/down.svg"} width={30} height={30} alt='ドロップダウンアイコン'/>
           </div>
         </motion.div>
 
@@ -40,7 +40,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, options, starArray
               {options.map((item, index) => (
                 <div key={item} className='flex'>
                   <motion.div
-                    className="dropdown-item bg-select_bg border border-white h-[50px] w-[75%] [&>p]:text-white [&>p]:text-[24px] flex items-center pl-[30px]"
+                    className="dropdown-item bg-select_bg border border-white h-[40px] w-[75%] [&>p]:text-white [&>p]:text-[20px] flex items-center pl-[30px]"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -49,7 +49,7 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, options, starArray
                   </motion.div>
                   <motion.div
                     key={index}
-                    className="dropdown-item bg-select_bg border border-white h-[50px] w-[25%] flex items-center justify-center text-white [&>p]:text-[35px]"
+                    className="dropdown-item bg-select_bg border border-white h-[40px] w-[25%] flex items-center justify-center text-white [&>p]:text-[20px]"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}

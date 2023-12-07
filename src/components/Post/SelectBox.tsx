@@ -14,11 +14,11 @@ const SelectBox = ({ onChangeLanguages, onChangeDatabase, onChangeCms }: DropDow
   useEffect(() => {});
 
   const renderSelectBox = (label: string, name: string, onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void, options: { value: string; label: string }[]) => (
-    <label className='mt-[3px] w-[390px]'>
+    <label className='mt-[3px] w-[33%]'>
       <h2 className='text-1xl text-center md:text-[30px] 2xl:text-[40px] text-white'>
         {label}
       </h2>
-      <form className='relative -mt-[10px] h-11 w-full hover:opacity-60'>
+      <form className='relative -mt-[10px]  -mb-[20px] h-11 w-full hover:opacity-60'>
         <div className='absolute inset-y-2/4 left-[10px] md:left-[15px]'>
           <div className='relative hidden h-[30px] w-[30px] md:flex md:h-[40px] md:w-[40px]  2xl:h-[50px]  2xl:w-[50px]'>
             <Image src={'down.svg'} alt='select画像' layout='fill' objectFit='contain' />

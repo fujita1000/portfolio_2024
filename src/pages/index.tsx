@@ -6,6 +6,7 @@ import { BlogPost } from "@/lib/types";
 import SelectBox from "@/components/Post/SelectBox";
 import { useState } from 'react';
 import { multipleSearch } from "@/lib/logic";
+import Skills from "@/components/Skills/Skills";
 
 type Props = {
     Posts: BlogPost[];
@@ -20,10 +21,10 @@ type Props = {
     return (
       <>
         <main className="min-h-screen flex">
-          {/* タブレット未満の場合はAsideを非表示に */}
           <Aside />
           <div className="w-full md:w-[65%]">
             <div className="w-[98%] m-auto">
+              <div className="mt-[10px]">
               <SelectBox
                 languages={languages}
                 database={database}
@@ -32,13 +33,18 @@ type Props = {
                 onChangeDatabase={(e) => { setDatabase(e.target.value); }}
                 onChangeCms={(e) => { setCms(e.target.value); }}
               />
-  
+              </div>
               <div className="xl:grid xl:gap-4 2xl:gap-6 3xl:gap-8 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4">
                 {filtered.map((post: any) => (
                   <PostCard key={post.slug} post={post} />
                 ))}
               </div>
             </div>
+
+          <div className="lg:hidden">
+          <Skills/>
+          </div>
+
           </div>
         </main>
       </>

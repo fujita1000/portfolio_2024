@@ -26,8 +26,8 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
 
   return (
     <>
-    <div key={post.sys.id} className="m-auto w-[390px] mt-[20px] text-center bg-gray-600 rounded-[28px]">
-      <div className="relative w-full h-[200px]">
+    <div key={post.sys.id} className="m-auto w-[95%] mt-[20px] text-center bg-gray-600 rounded-[28px]">
+      <div className="relative w-full h-[150px]">
         <Image
           src={imageUrl}
           alt={post.fields.title || "ブログの画像"}
@@ -57,9 +57,9 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         </div>
       </div>
 
-      <h2 className="my-[20px]">{post.fields.title}</h2>
+      <h2 className="my-[10px]">{post.fields.title}</h2>
 
-      <div className="flex justify-center pb-[20px] ">
+      <div className="flex justify-center pb-[10px] ">
         <p className="mr-2">{createdDateResults}</p>
         <p>(更新日: {updateDateResults})</p>
       </div>

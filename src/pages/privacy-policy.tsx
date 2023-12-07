@@ -13,9 +13,9 @@ const Privacy = () => {
         <meta name='keywords' content='fujita Portfolio（フジタ ポートフォリオ） プライバシーポリシー' />
 
       </Head>
-      <div className='w-full bg-sub'>
-        <div className='m-auto w-11/12 pb-20 pt-10 [&>h3]:text-[25px] xl:[&>p]:text-[20px] xl:[&>h3]:text-[30px] 2xl:[&>h3]:text-[35px] 2xl:[&>p]:text-[25px]'>
-          <h2 className='text-[30px]'>
+      <div className='w-full'>
+        <div className='m-auto w-11/12 pb-[20px]  pt-[20px] [&>p]:text-[16px] [&>h3]:text-[22px] xl:[&>p]:text-[20px] xl:[&>h3]:text-[30px] 2xl:[&>h3]:text-[35px] 2xl:[&>p]:text-[25px]'>
+          <h2 className='text-[25px]'>
             プライバシーポリシー
           </h2>
           <br />
