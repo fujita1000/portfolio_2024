@@ -53,12 +53,12 @@ const MyPage = () => {
 
 
     {isLoggedIn && (
-    <div className='w-[95%] lg:w-[1248px] h-[573px] m-auto bg-profile_bg my-[30px]'>
+    <div className='w-[95%] lg:w-[990px] xl:w-[1200px] 2xl:w-[1248px] h-[573px] m-auto bg-profile_bg my-[30px]'>
       <div className='w-[90%] m-auto h-[90%] py-[50px] relative'>
       <Profile />
       <div className="relative mt-[350px] lg:mt-[400px]">
-      <button onClick={handleSignOut} className='w-[150px] h-[50px] lg:w-[460px] lg:h-[70px] bg-black absolute left-[0px]'>ログアウトする</button>
-      <button onClick={handleDeleteAccount} className='w-[150px] h-[50px] lg:w-[460px] lg:h-[70px] bg-remove_bg absolute right-[0px]'>退会する</button>
+      <button onClick={handleSignOut} className='w-[150px] h-[50px] lg:w-[400px] 2xl:w-[450px] lg:h-[70px] bg-black absolute left-[0px]'>ログアウトする</button>
+      <button onClick={handleDeleteAccount} className='w-[150px] h-[50px] lg:w-[400px] 2xl:w-[450px]  lg:h-[70px] bg-remove_bg absolute right-[0px]'>退会する</button>
       </div>
 
       </div>

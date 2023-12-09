@@ -26,15 +26,15 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
 
   return (
     <>
-    <div key={post.sys.id} className="m-auto w-[95%] mt-[20px] text-center bg-gray-600 rounded-[28px]">
-      <div className="relative w-full h-[150px]">
+    <div key={post.sys.id} className="m-auto w-[95%] mt-[20px] lg:mt-[40px] text-center bg-gray-600 rounded-[28px]">
+      <div className="relative w-full h-[150px] lg:h-[250px]">
         <Image
           src={imageUrl}
           alt={post.fields.title || "ブログの画像"}
           fill
           style={{ objectFit: "cover" }}
           className="rounded-t-[28px]"
-          onClick={openModal} // Open modal on image click
+          onClick={openModal} 
         />
         <div className="absolute top-[10px] left-[10px] flex">
           {post.fields.languages && (

@@ -97,7 +97,7 @@ const ChatRoom: React.FC<ChatRoomProps> = ({ postId }) => {
 
   return (
     <>
-    <div className="h-[350px] overflow-y-auto border border-gray-300 p-4 rounded-md"> {/* Set maximum height and enable vertical scrolling */}
+    <div className="h-[350px] xl:h-[500px] xl:w-[300px] 2xl:w-[350px] overflow-y-auto border border-gray-300 p-4 rounded-md"> 
       <h1 className="text-white">【{chatRoomTitle}】の掲示板</h1>
       <div className='my-[20px]'>
         {messages.map((message, index) => (
@@ -121,7 +121,7 @@ const ChatRoom: React.FC<ChatRoomProps> = ({ postId }) => {
         <form onSubmit={handleSendMessage}>
           <textarea
             value={newMessage}
-            className='h-[50px] w-[75%]'
+            className='h-[50px] w-[75%] lg:w-[90%] xl:w-[70%] 2xl:w-[80%]'
             onChange={(e) => setNewMessage(e.target.value)}
           />
           <div className='absolute bottom-[0px] right-[10px] z-[20]'>

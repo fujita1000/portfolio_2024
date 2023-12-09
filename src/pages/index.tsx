@@ -20,7 +20,7 @@ type Props = {
   
     return (
       <>
-        <main className="min-h-screen flex">
+        <main className="min-h-screen flex ">
           <Aside />
           <div className="w-full md:w-[65%]">
             <div className="w-[98%] m-auto">
@@ -34,7 +34,7 @@ type Props = {
                 onChangeCms={(e) => { setCms(e.target.value); }}
               />
               </div>
-              <div className="xl:grid xl:gap-4 2xl:gap-6 3xl:gap-8 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4">
+              <div className="xl:grid xl:gap-[2px] 2xl:gap-[1px]  xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4">
                 {filtered.map((post: any) => (
                   <PostCard key={post.slug} post={post} />
                 ))}
