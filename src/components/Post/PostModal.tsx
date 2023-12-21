@@ -77,7 +77,7 @@ const PostModal: React.FC<PostModalProps> = ({ postId, postTitle, body, image, o
                   <Image src={"/comment.png"} className='absolute right-[75px] top-[14px] xl:top-[25px] xl:right-[100px]' width={50} height={50} alt='logo'/>
                   </button>
                   <p className="text-white  mt-[150px] lg:mt-[550px] 2xl:mt-[20px] text-[20px] mb-[20px]">【{postTitle}】</p> 
-                  <div className="[&>p]:text-white w-full m-auto">{documentToReactComponents(body)}</div> 
+                  <div className="[&>p]:text-white w-full m-auto [&>p]:mb-[10px]">{documentToReactComponents(body)}</div> 
                 </div>
               </div>
               )}

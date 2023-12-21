@@ -48,12 +48,12 @@ const SelectBox = ({ onChangeLanguages, onChangeDatabase, onChangeCms }: DropDow
         <div className='mb-10 flex w-full justify-between'>
           {renderSelectBox('Languages', 'languages', onChangeLanguages, [
             { value: '', label: 'ALL' },
-            { value: 'HTML/CSS', label: 'HTML/CSS' },
-            { value: 'Javascript', label: 'Javascript' },
-            { value: 'ReactJS', label: 'ReactJS' },
-            { value: 'Next.js', label: 'Next.js' },
+            { value: 'html/css', label: 'HTML/CSS' },
+            { value: 'javascript', label: 'Javascript' },
+            { value: 'react', label: 'React' },
+            { value: 'next.js', label: 'Next.js' },
             { value: 'php', label: 'PHP' },
-            { value: 'Laravel', label: 'Laravel' },
+            { value: 'laravel', label: 'Laravel' },
           ])}
           
           {renderSelectBox('Database', 'database', onChangeDatabase, [
@@ -65,8 +65,8 @@ const SelectBox = ({ onChangeLanguages, onChangeDatabase, onChangeCms }: DropDow
           {renderSelectBox('CMS', 'cms', onChangeCms, [
             { value: '', label: 'ALL' },
             { value: 'wordpress', label: 'WordPress' },
-            { value: 'MicroCMS', label: 'MicroCMS' },
-            { value: 'Contentful', label: 'Contentful' },
+            { value: 'microCMS', label: 'MicroCMS' },
+            { value: 'contentful', label: 'Contentful' },
           ])}
         </div>
       </div>
