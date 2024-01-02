@@ -22,7 +22,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
   const createdDateResults = createdDate.split("T")[0];
   const updateDate = post.sys.updatedAt;
   const updateDateResults = updateDate.split("T")[0];
-  const imageUrl = post.fields.mainImage[0].secure_url;
+  const imageUrl = post.fields.mainImage?.[0]?.secure_url || '/fallback_image_url';
 
   return (
     <>
